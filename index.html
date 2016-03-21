@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Area of a Circle</title>
+        <title>Calculalate Area</title>
     </head>
     <body>
-        <p>Please enter the radius below</p>
-        <input type="text" id="radius">
-        <p id="errorMessage"></p>
         <script>
-            function calcArea(){
-                var radius;
-                var area;
-               
-                radius = document.getElementById('radius').value;
-               
-                if (radius!null){
-                    area = 3.142 * radius * radius;
-                    document.write(area);
-                }else{
-                    document.write(document.getElementById("errorMessage").innerHTML = "Please put in a radius value!");
-                    //document.getElementById("errorMessage").innerHTML = "Please put in a radius value!"
+        function getArea()
+        {
+            var radius;
+            var area;
+                radius=document.getElementById("radius").value;
+                
+                if(!radius){
+                    alert("Give a radius value.")
                 }
-
-            }
-               
+                else if(is NaN(radius)){
+                    alert("Only enter numbers.")
+                }
+                else{
+                    area= 3-142*radius*radius;
+                    alert(area);
+                }
+        }
+            
         </script>
+            <p>please enter the radius</p>
+            <input type="text" id="radius"/>
+            <button type="button" id="area" Onclick=getArea()>Get Area</button>
+            <p id="errorMessage"></p>
+     
        
-        <button type="button" onclick="calcArea()">Area</button>
+      
     </body>
 </html>
